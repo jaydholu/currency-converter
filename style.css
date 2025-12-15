@@ -136,7 +136,20 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 36px;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+    .convert-group {
+        flex-direction: column;
+        gap: 22px;
+    }
+    
+    .convert-group .form-group {
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 /* --- FORM ELEMENTS --- */
