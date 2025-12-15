@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="container">
+        <header>
+            <h1>Currency Converter</h1>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </div>
+        </header>
+
+        <form>
+            <div class="form-group amount-input">
+                <label>Enter Amount</label>
+                <input type="number" id="amount" value="100" min="1">
+            </div>
+
+            <div class="convert-group">
+                <div class="form-group">
+                    <label>From</label>
+                    <div class="currency-box">
+                        <img src="https://flagcdn.com/w80/us.png" alt="flag" id="from-flag" class="flag-img">
+                        <select id="from-currency"></select>
+                        <i class="fas fa-chevron-down" style="font-size: 12px; color: var(--text-muted);"></i>
+                    </div>
+                </div>
+
+                <div class="swap-container">
+                    <button type="button" class="swap-btn" id="swap-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <label>To</label>
+                    <div class="currency-box">
+                        <img src="https://flagcdn.com/w80/in.png" alt="flag" id="to-flag" class="flag-img">
+                        <select id="to-currency"></select>
+                        <i class="fas fa-chevron-down" style="font-size: 12px; color: var(--text-muted);"></i>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="convert-btn" id="get-button">Get Exchange Rate</button>
+        </form>
+
+        <div class="result-box" id="result-box">
+            <h2 class="total-amount" id="total-result"></h2>
+            <p class="exchange-rate-text" id="rate-text"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
